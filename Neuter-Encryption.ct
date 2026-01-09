@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"Neuter Dahlia Float Encrypt/Decrypt"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript Async="1">[ENABLE]
+// 41 ?? 41 ?? 41 ?? 41 ?? 56 57 55 53 48 81 EC ?? ?? ?? ?? C5 79 7F ?? 24 ?? 00 00 00 C5 79 ?? B4 ?? C0 00 ?? 00 C5 79 ?? AC 24 ?? 00 00 00 C5 79
+aobscanmodule(encrypt_func, MonsterHunterWilds.exe, 41 57 41 56 41 55 41 54 56 57 55 53 48 81 ec e8 00 00 00 c5 79 7f bc 24 d0 00 00 00 c5 79 7f b4 24 c0 00 00 00 c5 79 7f ac 24 b0 00 00 00 c5 79 7f a4 24 a0 00 00 00 c5 79 7f 9c 24 90 00 00 00 c5 79 7f 94 24 80 00 00 00)
+
+encrypt_func:
+  mov rax, [r8]
+  mov [rcx], rax
+  mov rax, [r8+8]
+  mov [rcx+8], rax
+  mov rax, rcx
+  ret
+
+registersymbol(encrypt_func)
+
+aobscanmodule(decrypt_func, MonsterHunterWilds.exe, 41 56 56 57 53 48 83 ec 38 c5 f9 7f 74 24 20 4c 89 cf 48 89 ce)
+
+decrypt_func:
+  mov rax, [r8]
+  mov [rcx], rax
+  mov rax, [r8+8]
+  mov [rcx+8], rax
+  mov rax, rcx
+  ret
+
+registersymbol(decrypt_func)
+
+[DISABLE]
+encrypt_func:
+  db  41 57 41 56 41 55 41 54 56 57 55 53 48 81 ec e8 00 00 00 c5 79 7f bc 24 d0 00 00 00 c5 79 7f b4 24 c0 00 00 00 c5 79 7f ac 24 b0 00 00 00 c5 79 7f a4 24 a0 00 00 00 c5 79 7f 9c 24 90 00 00 00 c5 79 7f 94 24 80 00 00 00
+decrypt_func:
+  db  41 56 56 57 53 48 83 ec 38 c5 f9 7f 74 24 20 4c 89 cf 48 89 ce
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
