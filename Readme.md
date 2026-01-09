@@ -32,7 +32,7 @@ e.g.:
 \Plugin Mods\Base-Dll-Proxy
 \Plugin Mods\Neuter-Encryption
 ```
-Then just open and built. This does have pre-set post-build copy commands that will probably fail on your system.
+Then just open this and build. This does have pre-set post-build copy commands that will probably fail on your system.
 
 # Credits
 Thanks to cola for finding & creating the AoB scans and replacement bytes.<br>
