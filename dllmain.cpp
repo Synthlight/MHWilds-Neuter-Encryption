@@ -65,8 +65,8 @@ void DoInjection() {
     */
 
     const std::vector<PatchFunction> injectorFunctions{
-        &NeuterDhaliaFloatDecrypt,
-        &NeuterDhaliaFloatEncrypt,
+        &NeuterDahliaFloatDecrypt,
+        &NeuterDahliaFloatEncrypt,
     };
 
     const auto result = DoPatchFunctionsAsync(moduleName, moduleAddress, &allocator, injectorFunctions);
