@@ -35,5 +35,5 @@ e.g.:
 Then just open and built. This does have pre-set post-build copy commands that will probably fail on your system.
 
 # Credits
-Thanks to cola for finding & creating the AoB scans and replacement bytes.
+Thanks to cola for finding & creating the AoB scans and replacement bytes.<br>
 All I've (LordGregory) done is just put them in a plugin to patch the assy on startup.
